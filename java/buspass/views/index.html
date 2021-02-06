@@ -1,0 +1,320 @@
+<html>
+<head>
+
+    <link href="/bootstrap/bootstrap.css" rel="stylesheet"/>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/bootstrap/datatables.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="/home/home.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-sm   navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">Bus Pass Management</a>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="#htab1" data-toggle="tab">Add User </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#htab2" data-toggle="tab">Create Pass <span
+                        class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#htab3" data-toggle="tab">Renewal Pass <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#htab4" data-toggle="tab">View Bus Pass <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item">
+                    <a class="nav-link" href="/" >Logout</a> <span class="sr-only">(current)</span></a>
+                </li>
+    
+        </ul>
+
+    </div>
+</nav>
+
+<div class="tab-content" style="margin: 30px">
+    <div role="tabpanel" class="tab-pane fade in active" id="htab1">
+        <h1>Add User</h1>
+
+        <div class="col-md-3">
+            <div class="form-group">
+                <label>Name:</label>
+                <input id="name1" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Mobile Number:</label>
+                <input id="mobile1" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Author Number:</label>
+                <input id="author1" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Age</label>
+                <input id="age1" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="sel1">Select Gender:</label>
+                <select id="gender1" class="form-control" id="sel1" style="height: 30px">
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Transgender</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Address:</label>
+                <input id="address1" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Pincode:</label>
+                <input id="pincode1" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Image:</label>
+                <input type="text" class="form-control">
+            </div>
+            <input type="file" id="myFile">
+            <button id="adduser1" type="button" class="btn btn-success">Add User</button>
+        </div>
+        <div class="col-md-9">
+            <h2>Customer Details</h2>
+            <table id="adduser_table" class="table table-striped table-bordered table-sm"
+                   cellspacing="0"
+                   width="100%">
+                <thead>
+                <tr>
+                    <th class="th-sm">ID
+                    </th>
+                    <th class="th-sm">NAME
+                    </th>
+                    <th class="th-sm">MOBILE
+                    </th>
+                    <th class="th-sm">AUTHOR NUMBER
+                    </th>
+                    <th class="th-sm">AGE
+                    </th>
+                    <th class="th-sm">GENDER
+                    </th>
+                    <th class="th-sm">ADDRESS
+                    </th>
+                    <th class="th-sm">PINCODE
+                    </th>
+                </tr>
+                </thead>
+                <tbody id="passenger_body">
+               l̥</tfoot>
+            </table>
+        </div>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="htab2">
+        <h1>Create Pass</h1>
+
+        <div class="col-md-3">
+            <div class="form-group">
+                <label>Author Number:</label>
+                <input id="author2" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Name:</label>
+                <input id="name2" type="text" class="form-control" DISABLED>
+            </div>
+            <div class="form-group">
+                <label>Mobile Number:</label>
+                <input id="mobile2" type="text" class="form-control" DISABLED>
+            </div>
+            <div class="form-group">
+                <label>Age</label>
+                <input id="age2" type="text" class="form-control" DISABLED>
+            </div>
+            <div class="form-group">
+                <label for="sel1">Select Gender:</label>
+                <input id="gender2" type="text" class="form-control" DISABLED>
+            </div>
+            <div class="form-group">
+                <label>Address:</label>
+                <input id="address2" type="text" class="form-control" DISABLED>
+            </div>
+            <div class="form-group">
+                <label>Pincode:</label>
+                <input id="pincode2" type="text" class="form-control" DISABLED>
+            </div>
+            <div class="form-group">
+                <label>FROM PLACE:</label>
+                <input id="from2" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>TO PLACE:</label>
+                <input id="to2" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>AMOUNT:</label>
+                <input id="amount2" type="text" class="form-control">
+            </div>
+            <button id="add2" type="button" class="btn btn-success">Add User</button>
+        </div>
+        <div class="col-md-9">
+            <h2>Customer Details</h2>
+            <table id="passgeneration" class="table table-striped table-bordered table-sm"
+                   cellspacing="0"
+                   width="100%">
+                <thead>
+                <tr>
+                    <th class="th-sm">ID
+                    </th>
+                    <th class="th-sm">NAME
+                    </th>
+                    <th class="th-sm">MOBILE
+                    </th>
+                    <th class="th-sm">AUTHOR NUMBER
+                    </th>
+                    <th class="th-sm">AGE
+                    </th>
+                    <th class="th-sm">GENDER
+                    </th>
+                    <th class="th-sm">ADDRESS
+                    </th>
+                    <th class="th-sm">PINCODE
+                    </th>
+                    <th class="th-sm">FROM PLACE
+                    </th>
+                    <th class="th-sm">TO PLACE
+                    </th>
+                    <th class="th-sm">AMOUNT
+                    </th>
+
+                </tr>
+                </thead>
+                <tbody id="pass_body">
+                
+
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <div role="tabpanel" class="tab-pane fade in" id="htab3">
+        <h1>Renewal Pass</h1>
+
+        <div class="col-md-3">
+            <div class="form-group">
+                <label>Author Number:</label>
+                <input id="author3" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>FROM DATE:</label>
+                <input id="from3" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>TO DATE:</label>
+                <input id="to3" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>FROM PLACE:</label>
+                <input id="fromplace3" type="text" class="form-control" disabled>
+            </div>
+            <div class="form-group">
+                <label>TO PLACE:</label>
+                <input id="toplace3" type="text" class="form-control" disabled>
+            </div>
+            <div class="form-group">
+                <label>AMOUNT:</label>
+                <input id="amount3" type="text" class="form-control" disabled>
+            </div>
+            <div class="form-group">
+                <label>Name:</label>
+                <input id="name3" type="text" class="form-control" disabled>
+            </div>
+            <div class="form-group">
+                <label>Mobile Number:</label>
+                <input id="mobile3" type="text" class="form-control" disabled>
+            </div>
+            <div class="form-group">
+                <label>Age</label>
+                <input id="age3" type="text" class="form-control" disabled>
+            </div>
+            <div class="form-group">
+                <label for="sel1">Select Gender:</label>
+                <input id="gender3" type="text" class="form-control" disabled>
+            </div>
+            <div class="form-group">
+                <label>Address:</label>
+                <input id="address3" type="text" class="form-control" disabled>
+            </div>
+            <div class="form-group">
+                <label>Pincode:</label>
+                <input id="pincode3" type="text" class="form-control" disabled>
+            </div>
+
+            <button id="add3" type="button" class="btn btn-success">Add User</button>
+        </div>
+        <div class="col-md-9">
+            <h2>Customer Details</h2>
+            <table id="renewal_table" class="table table-striped table-bordered table-sm"
+                   cellspacing="0"
+                   width="100%">
+                <thead>
+                <tr>
+                    <th class="th-sm">ID
+                    </th>
+                    <th class="th-sm">NAME
+                    </th>
+                    <th class="th-sm">AUTHOR NUMBER
+                    </th>
+                    <th class="th-sm">FROM DATE
+                    </th>
+                    <th class="th-sm">TO DATE
+                    </th>
+                    <th class="th-sm">FROM PLACE
+                    </th>
+                    <th class="th-sm">TO PLACE
+                    </th>
+                    <th class="th-sm">AMOUNT
+                    </th>
+
+                </tr>
+                </thead>
+                <tbody id="renewal_body">
+                
+                
+
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <div role="tabpanel" class="tab-pane fade in" id="htab4">
+        <h1>View Bus Pass</h1>
+
+        <div class="col-md-12">
+            <div class="form-group col-md-3">
+                <label>Author Number:</label>
+                <input id="author4" type="text" class="form-control">
+            </div>
+        </div>
+        <div class="col-md-12">
+            <button id="search" type="button" class="btn btn-success">Search</button>
+        </div>
+        <!-- Bus pass Images-->
+        <div class="container">
+            <h5 class="section-title h1">.</h5>
+
+            <div class="row" id="search_passenger">
+               
+               
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="/bootstrap/jquery.min.js"></script>
+<script src="/home/home.js"></script>
+<script src="/bootstrap/datatable.min.js"></script>
+<script src="/bootstrap/datatable.bootstrap.min.js"></script>
+<script src="/bootstrap/bootstrap.min.js"></script>
+
+</html>

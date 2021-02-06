@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="/home/login.css">
+    <title></title>
+
+    
+</head>
+<body>
+<div class="container login-container">
+    <div class="row">
+        <div class="col-md-6 login-form-2">
+            <h3>Login</h3>
+
+            <form>
+                <div class="form-group">
+                    <input id="username" type="text" class="form-control" placeholder="Your Email *" value=""/>
+                </div>
+                <div class="form-group">
+                    <input id="password" type="password" class="form-control" placeholder="Your Password *" value=""/>
+                </div>
+                <div class="form-group">
+                    <input id="login" type="button" class="btnSubmit" value="Login"/>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+<script src="/bootstrap/jquery.min.js"></script>
+
+<script>
+        $("#login").on('click',function(){
+            var username = $("#username").val();
+            var password = $("#password").val();
+
+            if((username=="admin") && (password=="admin")){
+                
+                window.location = "/home";
+            }else{
+                
+                alert('invalid username and password')
+            }
+        })
+    </script>
+</html>

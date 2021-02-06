@@ -1,0 +1,123 @@
+<html>
+<head>
+
+    <link href="/bootstrap/bootstrap.css" rel="stylesheet"/>
+    <link href="/bootstrap/datatables.css" rel="stylesheet"/>
+
+    <!--<link rel="stylesheet" type="text/css" href="/home/home.css">-->
+</head>
+<body>
+<div class="container">
+
+
+    <div class="row">
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Canteen Automation</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="#htab1" data-toggle="tab">Add Menu</a></li>
+                    <li><a href="#htab2" data-toggle="tab">View Orders</a></li>
+                    <li><a href="#htab3" data-toggle="tab">Completed orders</a></li>
+                    <li><a href="/login" >Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <div class="tab-content" style="margin: 30px">
+            <div role="tabpanel" class="tab-pane fade in active" id="htab1">
+                <h1>Add Menu</h1>
+
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>Menu Name:</label>
+                        <input id="menuname" type="text" class="form-control">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Amount:</label>
+                        <input id="amount" type="text" class="form-control">
+                    </div>
+
+
+
+
+                    <button id="addmenu" type="button" class="btn btn-warning">Add Menu</button>
+                </div>
+                <div class="col-md-3">
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Menu Name</th>
+                            <th scope="col">Amount</th>
+                            <!-- <th scope="col">Action</th> -->
+                        </tr>
+                        </thead>
+                        <tbody id="menu_body">
+                        
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="htab2">
+                <h1>View Orders</h1>
+                <div class="col-md-9">
+                    <table class="table table-bordered">
+                        <thead>
+                        
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Table</th>
+                            <th scope="col">Menu Name</th>
+                            <th scope="col">Amount</th>
+                           
+                        </tr>
+                        </thead>
+                        <tbody id="pending_body">
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+            <div role="tabpanel" class="tab-pane fade in" id="htab3">
+                <h1>Completed orders</h1>
+                <div class="col-md-8">
+                    <table class="table table-bordered">
+                        <thead>
+                        
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Table</th>
+                            <th scope="col">Menu Name</th>
+                            <th scope="col">Amount</th>
+                           
+                        </tr>
+                        </thead>
+                        <tbody id="completed_body">
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
+            <div role="tabpanel" class="tab-pane fade in" id="htab4">
+                <h1>tab 4</h1>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+<script src="/bootstrap/jquery.min.js"></script>
+<script src="/home/home.js"></script>
+<script src="/bootstrap/datatable.min.js"></script>
+<script src="/bootstrap/datatable.bootstrap.min.js"></script>
+<script src="/bootstrap/bootstrap.min.js"></script>
+
+</html>

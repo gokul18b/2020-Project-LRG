@@ -1,0 +1,271 @@
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="./css/stylesheets/bootstrap.css"> 
+ <link rel="stylesheet" type="text/css" href="./css/stylesheets/admin.css"> 
+ <link rel="stylesheet" type="text/css" href="./css/stylesheets/sweetalert.css"> 
+ 
+ 
+
+ <script src="./css/javascripts/jquery.js"></script> 
+ <script src="./css/javascripts/bootstrap.js"></script> 
+ <script src="./css/javascripts/sweetalert.js"></script> 
+ <script src="./css/javascripts/chart.js"></script> 
+ <!--<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>-->
+ 
+ <script src="./css/javascripts/src/voter.js"></script> 
+ 
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<!-- Nav tabs -->
+			<div class="card">
+				<ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+					<li role="presentation"><a href="#candidate" aria-controls="candidate" role="tab" data-toggle="tab">Candidate</a></li>
+					<li role="presentation"><a href="#voter" aria-controls="voter" role="tab" data-toggle="tab">Voter</a></li>
+					<li role="presentation"><a href="#report" aria-controls="report" role="tab" data-toggle="tab">Report</a></li>
+					<li role="presentation"><a onclick="window.location.href='/'" style="cursor:pointer" aria-controls="report" role="tab" data-toggle="tab">Logout</a></li>
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="profile">
+						<div class="row">
+							<div class="col-xs-12 col-sm-6 col-md-6">
+								<div class="well well-sm">
+									<div class="row">
+										<div class="col-sm-6 col-md-4">
+											<img id="proimg" src="http://placehold.it/380x500" alt="" class="img-rounded img-responsive" />
+										</div>
+										<div class="col-sm-6 col-md-8">
+											<h4 id="proname">Gokul</h4>
+											<small><cite id="promobile" title="San Francisco, USA">7418227833<i class="glyphicon glyphicon-map-marker">
+											</i></cite></small>
+											<p id="proemail">
+												<i class="glyphicon glyphicon-envelope"></i>Female
+											</p>
+											<p">
+												<i class="glyphicon glyphicon-globe"></i>Admin</a>
+											</p>
+											<p id="proaddress">
+												<i class="glyphicon glyphicon-gift"></i>18-08-2017
+											</p>
+											<!-- Split button -->
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div role="tabpanel" class="tab-pane" id="candidate">
+					
+						<div class="col-sm-6">
+							<input class="glyphicon glyphicon-search" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+							<ul id="myUL">
+							  
+							</ul>
+						</div>
+						
+					</div>
+					
+					<div role="tabpanel" class="tab-pane" id="voter">
+						<div class="col-sm-4" style="padding:10px;margin:50px;border:dotted">
+							<h3>Chairman</h3>
+							<br>
+							<select class="form-control" id="chairman_opt">
+							  
+							</select>
+							<button id="btn_chairman" type="button" style="margin-top:20px;" class="btn btn-success">Vote</button>
+						</div>
+						<div class="col-sm-4" style="padding:10px;margin:50px;border:dotted">
+							<h3>Vice Chairman</h3>
+							<br>
+							<select class="form-control" id="vicechairman_opt">
+							  
+							</select>
+							<button id="btn_vicechairman" type="button" style="margin-top:20px;" class="btn btn-success">Vote</button>
+						</div>
+						
+						<div class="col-sm-4" style="padding:10px;margin:50px;border:dotted">
+							<h3>College Secretary</h3>
+							<br>
+							<select class="form-control" id="college_opt">
+							  
+							</select>
+							<button id="btn_college" type="button" style="margin-top:20px;" class="btn btn-success">Vote</button>
+						</div>
+						
+						<div class="col-sm-4" style="padding:10px;margin:50px;border:dotted">
+							<h3>Finance Secretary</h3>
+							<br>
+							<select class="form-control" id="finance_opt">
+							  
+							</select>
+							<button id="btn_finance" type="button" style="margin-top:20px;" class="btn btn-success">Vote</button>
+						</div>
+						
+						<div class="col-sm-4" style="padding:10px;margin:50px;border:dotted">
+							<h3>Treasurer</h3>
+							<br>
+							<select class="form-control" id="treasurer_opt">
+							  
+							</select>
+							<button id="btn_treasurer" type="button" style="margin-top:20px;" class="btn btn-success">Vote</button>
+						</div>
+						<div class="col-sm-4" style="padding:10px;margin:50px;border:dotted">
+							<h3>Sports Secretary</h3>
+							<br>
+							<select class="form-control" id="sports_opt">
+							  
+							</select>
+							<button id="btn_sports" type="button" style="margin-top:20px;" class="btn btn-success">Vote</button>
+						</div>
+						
+						
+					</div>
+					
+					<div role="tabpanel" class="tab-pane" id="report">
+						<div  class ="col-sm-6">
+						<h1 style="color:BLUE">Chairman</h1>
+							<table class="table table-bordered">
+								<thead>
+								  <tr>
+									<th>Rank</th>
+									<th>Name</th>
+									<th>Count</th>
+								  </tr>
+								</thead>
+								<tbody id="chairman">
+								  
+								</tbody>
+							  </table>
+						</div>                        
+						<div class ="col-sm-6">
+						<h1 style="color:BLUE">Vice Chairman</h1>
+						<table class="table table-bordered">
+								<thead>
+								  <tr>
+									<th>Rank</th>
+									<th>Name</th>
+									<th>Count</th>
+								  </tr>
+								</thead>
+								<tbody id="vicechairman">
+								  
+								</tbody>
+							  </table>
+						</div>                        
+						<div class ="col-sm-6">
+						<h1 style="color:BLUE">College Secretary</h1>
+						<table class="table table-bordered">
+
+								<thead>
+								  <tr>
+									<th>Rank</th>
+									<th>Name</th>
+									<th>Count</th>
+								  </tr>
+								</thead>
+								<tbody id="collegesec">
+								  
+								</tbody>
+							  </table></div>                        
+						<div class ="col-sm-6">
+						<h1 style="color:BLUE">Finance Secretary</h1>
+						<table class="table table-bordered">
+								<thead>
+								  <tr>
+									<th>Rank</th>
+									<th>Name</th>
+									<th>Count</th>
+								  </tr>
+								</thead>
+								<tbody id="financesec">
+								  
+								</tbody>
+							  </table></div>                        
+						<div class ="col-sm-6">
+						<h1 style="color:BLUE">Treasurer</h1>
+						<table class="table table-bordered">
+								<thead>
+								  <tr>
+									<th>Rank</th>
+									<th>Name</th>
+									<th>Count</th>
+								  </tr>
+								</thead>
+								<tbody id="treasurer">
+								  
+								</tbody>
+							  </table></div>                        
+						<div class ="col-sm-6">
+						<h1 style="color:BLUE">Sports Secretary</h1>
+						<table class="table table-bordered">
+								<thead>
+								  <tr>
+									<th>Rank</th>
+									<th>Name</th>
+									<th>Count</th>
+								  </tr>
+								</thead>
+								<tbody id="sportssec">
+								  
+								</tbody>
+							  </table></div>                            
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"> Deatail</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+							<div class="col-xs-12">
+								<div class="well well-sm">
+									<div class="row">
+										<div class="col-sm-6 col-md-4">
+											<img id="modalimg" src="http://placehold.it/380x500" alt="" class="img-rounded img-responsive" />
+										</div>
+										<div class="col-sm-6 col-md-8">
+											<h4 id="modname"></h4>
+											<small><cite id="modmobile" title="San Francisco, USA"></cite></small>
+											<p>
+												<i class="glyphicon glyphicon-globe"></i><a id="modpost"></a>
+												<br />
+												<i class="glyphicon glyphicon-envelope"></i><a id="modemail"></a>
+												<br />
+												<i class="glyphicon glyphicon-gift"></i><a id="modaddress"></a></p>
+											<!-- Split button -->
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>

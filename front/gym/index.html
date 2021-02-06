@@ -1,0 +1,27 @@
+<link href="./css/bootstrap.css" rel="stylesheet" id="bootstrap-css">
+<link href="./css/login.css" rel="stylesheet" id="bootstrap-css">
+<script src="./js/jquery.js"></script>
+<script src="./js/bootstrap.js"></script>
+<script src="./js/home.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!--
+    you can substitue the span of reauth email for a input with the email and
+    include the remember me checkbox
+    -->
+	<center><h3 style="color:white">Gym Management System</h3></center>
+    <div class="container">
+        <div class="card card-container">
+            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+            <img id="profile-img" class="profile-img-card" src="avatar_2x.png" />
+            <p id="profile-name" class="profile-name-card"></p>
+            <div class="form-signin">
+                <span id="reauth-email" class="reauth-email"></span>
+                <input id="username"  class="form-control" placeholder="Username" >
+                <input id="password" type="password"  class="form-control" placeholder="Password" >
+            
+                <button onclick="login()" class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+            </div><!-- /form -->
+            
+        </div><!-- /card-container -->
+    </div><!-- /container -->

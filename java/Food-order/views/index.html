@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="/bootstrap/bootstrap.css" rel="stylesheet"/>
+    <link href="/home/user.css" rel="stylesheet"/>
+    <title></title>
+</head>
+<body>
+<div class="navbar-wrapper">
+
+    <div class="row">
+        <div class="col-sm-7">
+            <h1>Menu Orders</h1>
+
+            <div class="container-fluid">
+                <div class="row" style="margin-top:20px;" id="menu_body">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <h1>Your Cart</h1>
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Menu</th>
+                    <th scope="col">Price</th>
+                </tr>
+                </thead>
+                <tbody id="cart_body">
+                   
+                </tbody>
+            </table>
+            <div style="float: right">
+            <button id="order" type="button" class="btn btn-warning">Order Now</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="/bootstrap/jquery.min.js"></script>
+<script src="/home/usermenu.js" ></script>
+</body>
+
+</html>
