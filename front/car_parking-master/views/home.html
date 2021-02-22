@@ -1,0 +1,340 @@
+<html>
+<head>
+
+    <link href="/bootstrap/bootstrap.css" rel="stylesheet"/>
+    <link href="/bootstrap/datatables.css" rel="stylesheet"/>
+
+
+    <link rel="stylesheet" type="text/css" href="/home/home.css">
+</head>
+<body>
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h2>Car Parking system</h2>
+            <a href="#" class="nav-tabs-dropdown btn btn-block btn-primary">Tabs</a>
+            <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-tabs-horizontal">
+                <li class="active"><a href="#htab1" data-toggle="tab">Add Customer</a></li>
+
+                <li><a href="#htab3" data-toggle="tab">Check Out</a></li>
+                <li><a href="#htab4" data-toggle="tab">Billing Details</a></li>
+                <li><a href="/">Logout</a></li>
+            </ul>
+            <div class="tab-content" style="margin: 30px">
+                <div role="tabpanel" class="tab-pane fade in active" id="htab1">
+                    <div class="col-md-3">
+                        <h2>Add Customer</h2>
+
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input id="name" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Mobile Number</label>
+                            <input id="mobile" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input id="password" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Vehicle Number</label>
+                            <input id="vehicle" type="text" class="form-control">
+                        </div>
+                        <!--<div class="form-group">-->
+                        <!--<label>ID proof</label>-->
+                        <!--<input id="idproof" type="text" class="form-control">-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                        <!--<label>RC book Number</label>-->
+                        <!--<input id="rcno" type="text" class="form-control">-->
+                        <!--</div>-->
+                        <div class="form-group">
+                            <label>Address</label>
+                            <textarea id="address" class="form-control" rows="5"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button onclick="addCustomer()" type="button" class="btn btn-success">Add</button>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <h2>Customer Details</h2>
+                        <table id="addcustomer_table" class="table table-striped table-bordered table-sm"
+                               cellspacing="0"
+                               width="100%">
+                            <thead>
+                            <tr>
+                                <th class="th-sm">ID
+                                </th>
+                                <th class="th-sm">NAME
+                                </th>
+                                <th class="th-sm">MOBILE
+                                </th>
+                                <th class="th-sm">VEHICLE NUMBER
+                                </th>
+                                <!--<th class="th-sm">ID PROOF-->
+                                <!--</th>-->
+                                <!--<th class="th-sm">RC BOOK NO-->
+                                <!--</th>-->
+                                <th class="th-sm">ADDRESS
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody id="customer_body">
+
+
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="htab2">
+                    <div class="col-md-3">
+                        <h2>Check In</h2>
+
+                        <div class="form-group">
+                            <label>Customer Id</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label>Mobile Number</label>
+                            <input type="text" class="form-control" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label>Vehicle Number</label>
+                            <input type="text" class="form-control" disabled>
+                        </div>
+                        <!--<div class="form-group">-->
+                        <!--<label>ID proof</label>-->
+                        <!--<input type="text" class="form-control" disabled>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                        <!--<label>RC book Number</label>-->
+                        <!--<input type="text" class="form-control" disabled>-->
+                        <!--</div>-->
+                        <div class="form-group">
+                            <label>Address</label>
+                            <textarea class="form-control" rows="5" disabled></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="btn btn-success">Check In</button>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <h2>Check In Details</h2>
+                        <table id="check In_table" class="table table-striped table-bordered table-sm"
+                               cellspacing="0"
+                               width="100%">
+                            <thead>
+                            <tr>
+                                <th class="th-sm">TOKEN
+                                </th>
+                                <th class="th-sm">NAME
+                                </th>
+                                <th class="th-sm">MOBILE
+                                </th>
+                                <th class="th-sm">VEHICLE NUMBER
+                                </th>
+                                <!--<th class="th-sm">ID PROOF-->
+                                <!--</th>-->
+                                <!--<th class="th-sm">RC BOOK NO-->
+                                <!--</th>-->
+                                <th class="th-sm">ADDRESS
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>GOKUL B</td>
+                                <td>7418227833</td>
+                                <td>TN 39 BK 0516</td>
+                                <td>BPBPBPG5601N</td>
+                                <td>45856215745226/</td>
+                                <td>70 ANNA STREET
+                                    KUMARANANDHAPURAM TIRUPUR
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>GOKUL B</td>
+                                <td>7418227833</td>
+                                <td>TN 39 BK 0516</td>
+                                <td>BPBPBPG5601N</td>
+                                <td>45856215745226/</td>
+                                <td>70 ANNA STREET
+                                    KUMARANANDHAPURAM TIRUPUR
+                                </td>
+                            </tr>
+
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade in" id="htab3">
+                    <div class="col-md-2">
+
+                        <h1>Select Mall</h1>
+
+                        <div role="tabpanel">
+                            <div class="col-sm-12">
+                                <ul class="nav nav-pills brand-pills nav-stacked" id="menulist" role="tablist">
+                                </ul>
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane active" id="tab1">
+                                        <div class="col-sm-12" id="slot">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <h2>Check Out</h2>
+
+                        <div class="form-group">
+                            <label>Token Number</label>
+                            <input onchange="getCheckout_details()" id="co_token" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>No of Days</label>
+                            <input id="co_days" type="text" class="form-control" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label>AMOUNT</label>
+                            <input id="co_amount" type="text" class="form-control" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label>CHECK IN TIME</label>
+                            <input id="co_in_time" type="text" class="form-control" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input id="co_name" type="text" class="form-control" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label>Mobile Number</label>
+                            <input id="co_mobile" type="text" class="form-control" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label>Vehicle Number</label>
+                            <input id="co_vehicle" type="text" class="form-control" disabled>
+                        </div>
+                        <!--<div class="form-group">-->
+                        <!--<label>ID proof</label>-->
+                        <!--<input id="co_proof" type="text" class="form-control" disabled>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                        <!--<label>RC book Number</label>-->
+                        <!--<input id="co_rcno" type="text" class="form-control" disabled>-->
+                        <!--</div>-->
+                        <div class="form-group">
+                            <label>Address</label>
+                            <textarea id="co_address" class="form-control" rows="5" disabled></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button id="addCheckout" type="button" class="btn btn-success">Check Out</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h2>Checkout Details</h2>
+                        <table id="checkout_table" class="table table-striped table-bordered table-sm"
+                               cellspacing="0"
+                               width="100%">
+                            <thead>
+                            <tr>
+                                <th class="th-sm">TOKEN
+                                </th>
+
+                                <th class="th-sm">IN TIME
+                                </th>
+
+                                <th class="th-sm">NAME
+                                </th>
+                                <th class="th-sm">MOBILE
+                                </th>
+                                <th class="th-sm">VEHICLE NUMBER
+                                </th>
+                                <!--<th class="th-sm">ID PROOF-->
+                                <!--</th>-->
+                                <!--<th class="th-sm">RC BOOK NO-->
+                                <!--</th>-->
+                                <th class="th-sm">ADDRESS
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody id="checkout_body">
+
+
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade in" id="htab4">
+                    <h1>Select Mall</h1>
+
+                    <div role="tabpanel">
+                        <div class="col-md-3">
+                            <div class="col-sm-12">
+                                <ul class="nav nav-pills brand-pills nav-stacked" id="billingmenulist" role="tablist">
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="col-md-9">
+                            <h2>Billing Details</h2>
+                            <table id="billing_table" class="table table-striped table-bordered table-sm"
+                                   cellspacing="0"
+                                   width="100%">
+                                <thead>
+                                <tr>
+                                    <th class="th-sm">TOKEN
+                                    </th>
+                                    <th class="th-sm">NAME
+                                    </th>
+                                    <th class="th-sm">MOBILE
+                                    </th>
+                                    <th class="th-sm">VEHICLE NUMBER
+                                    </th>
+                                    <!--<th class="th-sm">ID PROOF-->
+                                    <!--</th>-->
+                                    <!--<th class="th-sm">RC BOOK NO-->
+                                    <!--</th>-->
+                                    <th class="th-sm">ADDRESS
+                                    </th>
+                                    <th class="th-sm">CHECK IN
+                                    </th>
+                                    <th class="th-sm">CHECK OUT
+                                    </th>
+                                    <th class="th-sm">DAYS
+                                    </th>
+                                    <th class="th-sm">AMOUNT
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody id="billing_body">
+
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="/bootstrap/jquery.min.js"></script>
+<script src="/home/home.js"></script>
+<script src="/bootstrap/datatable.min.js"></script>
+<script src="/bootstrap/datatable.bootstrap.min.js"></script>
+<script src="/bootstrap/bootstrap.min.js"></script>
+
+</html>

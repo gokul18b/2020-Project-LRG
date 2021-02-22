@@ -5,8 +5,8 @@ package bloodbank.com.bb;
  */
 
 public class URL {
-//     public final static String URL="http://192.168.43.94/bb/bb";
-     public final static String URL="http://192.168.43.250/bb";
+     public final static String URL="http://127.0.0.1/bb";
+//     public final static String URL="http://localhost/bb";
 
 
     public final static String register =URL+"/register.php";

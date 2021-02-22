@@ -1,0 +1,104 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body class="bodys">
+    
+<div class="wrapper">
+    <ul class="tabs">
+        <li><a href="javascript:void(0); return false;" rel="#tabcontent1" class="tab active">Event Registration</a></li>
+        <li><a href="javascript:void(0); return false;" rel="#tabcontent2" class="tab">Booking History</a></li>
+        <li><a href="javascript:void(0); return false;" rel="#tabcontent3" class="tab">Logout</a></li>
+    </ul>
+    
+    <div class="tab_content_container">
+        <div class="tab_content tab_content_active" id="tabcontent1">
+            <div class="form-group">
+                <label>Name</label>
+                <input class="form-control" id="exampleInputPassword1" >
+              </div>
+              <div class="form-group">
+                <label>Category</label>
+                <input class="form-control" id="exampleInputPassword1" >
+              </div>
+              <div class="form-group">
+                <label>Amount</label>
+                <input class="form-control" id="exampleInputPassword1" >
+              </div>
+              <div class="form-group">
+                <label>Total Teams</label>
+                <input class="form-control" id="exampleInputPassword1" >
+              </div>
+              <div class="form-group">
+                <label>Location</label>
+                <input class="form-control" id="exampleInputPassword1" >
+              </div>
+              <div class="form-group">
+                <label>Contact Person</label>
+                <input class="form-control" id="exampleInputPassword1" >
+              </div>
+              <div class="form-group">
+                <label>Mobile Number</label>
+                <input class="form-control" id="exampleInputPassword1" >
+              </div>
+              <div class="form-group">
+                <label>Event Date</label>
+                <input class="form-control" id="exampleInputPassword1" >
+              </div>
+              <button type="submit" class="btn btn-primary">Register</button>
+        </div>
+        
+        <div class="tab_content" id="tabcontent2">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Event Date</th>
+                        <th scope="col">Event Name</th>
+                        <th scope="col">Team Name</th>
+                        <th scope="col">Contact Reason</th>
+                        <th scope="col">Mobile Number</th>
+                        <th scope="col">FUll Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>xxxxxxx</td>
+                        <td>XXXXX</td>
+                        <td>xxxxxxxxxxxxxxxxxx xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxxxxxxx</td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+</div>  
+</body>
+<script>
+    $(document).ready(function(){
+	$(".tabs li a").click(function() {
+		
+		// Active state for tabs
+		$(".tabs li a").removeClass("active");
+		$(this).addClass("active");
+		
+		// Active state for Tabs Content
+		$(".tab_content_container > .tab_content_active").removeClass("tab_content_active").fadeOut(200);
+		$(this.rel).fadeIn(500).addClass("tab_content_active");
+		
+	});	
+
+});
+
+</script>
+</html>

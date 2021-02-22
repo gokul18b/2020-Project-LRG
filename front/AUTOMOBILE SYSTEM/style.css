@@ -1,0 +1,163 @@
+@import url(https://fonts.googleapis.com/css?family=Vollkorn);
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+.form-group{
+    width:300px;
+}
+body {
+  font-family: Vollkorn;
+  height: 1000px;
+  padding: 2em;
+  line-height: 1.5;
+  max-width: 70em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabs {
+  height: 100%;
+}
+
+input[name=tabs] {
+  float: left;
+  opacity: 0;
+  position: absolute;
+}
+
+input[name=tabs] ~ label {
+  padding: 1em;
+  width: 20%;
+  float: left;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+input[name=tabs] ~ label:hover {
+  background: #d9d9d9;
+}
+input[name=tabs] ~ label:focus {
+  outline: 0;
+  text-shadow: 1px 1px 3px #888;
+}
+
+.tab {
+  height: 100%;
+  display: none;
+  padding: 6em 2em 2em;
+}
+
+label[for=toggle-apples] {
+  border-top: 8px solid #C0970A;
+  background: #FBF9E8;
+  border-left: 1px solid #cecc8e;
+  text-transform: uppercase;
+}
+
+#toggle-apples:checked ~ .tab-apples {
+  display: block;
+  background: #EDECD5;
+}
+
+#toggle-apples:checked ~ label[for=toggle-apples] {
+  cursor: default;
+  background: #EDECD5;
+  color: #C0970A;
+}
+
+label[for=toggle-bananas] {
+  border-top: 8px solid #AAC706;
+  background: #FBF9E8;
+  border-left: 1px solid #cecc8e;
+  text-transform: uppercase;
+}
+
+#toggle-bananas:checked ~ .tab-bananas {
+  display: block;
+  background: #EDECD5;
+}
+
+#toggle-bananas:checked ~ label[for=toggle-bananas] {
+  cursor: default;
+  background: #EDECD5;
+  color: #AAC706;
+}
+
+label[for=toggle-cherries] {
+  border-top: 8px solid #15C68E;
+  background: #FBF9E8;
+  border-left: 1px solid #cecc8e;
+  text-transform: uppercase;
+}
+
+#toggle-cherries:checked ~ .tab-cherries {
+  display: block;
+  background: #EDECD5;
+}
+
+#toggle-cherries:checked ~ label[for=toggle-cherries] {
+  cursor: default;
+  background: #EDECD5;
+  color: #15C68E;
+}
+
+label[for=toggle-oranges] {
+  border-top: 8px solid #14A3BB;
+  background: #FBF9E8;
+  border-left: 1px solid #cecc8e;
+  text-transform: uppercase;
+}
+
+#toggle-oranges:checked ~ .tab-oranges {
+  display: block;
+  background: #EDECD5;
+}
+
+#toggle-oranges:checked ~ label[for=toggle-oranges] {
+  cursor: default;
+  background: #EDECD5;
+  color: #14A3BB;
+}
+
+label[for=toggle-pears] {
+  border-top: 8px solid #776EEF;
+  background: #FBF9E8;
+  border-left: 1px solid #cecc8e;
+  text-transform: uppercase;
+}
+
+#toggle-pears:checked ~ .tab-pears {
+  display: block;
+  background: #EDECD5;
+}
+
+#toggle-pears:checked ~ label[for=toggle-pears] {
+  cursor: default;
+  background: #EDECD5;
+  color: #776EEF;
+}
+
+svg {
+  height: 2rem;
+  width: 2rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.text-title {
+  display: none;
+}
+@media screen and (min-width: 900px) {
+  .text-title {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.kaomoji {
+  white-space: nowrap;
+}

@@ -1,0 +1,110 @@
+login
+=====================
+var query = "select count(*) as count from admin where username='"+req.body.username+"' and password='"+req.body.password+"'";;
+
+response
+========
+[
+    {
+        "count": 1
+    }
+]
+
+
+=====================================================
+Add Customer
+===========
+172.30.3.46:3000/api/addCustomer
+
+var insert_customer = "INSERT INTO `customer` ( `name`, `mobile`, `address`) VALUES ( '" + name + "', '" + mobile + "', '" + address + "');";
+
+request
+=======
+{
+	"name":"Sandhiya",
+	"mobile":"7418227833",
+	"address":"Palladam"
+}
+
+response
+========
+Customer has been created
+
+
+======================================================
+View Customer
+172.30.3.46:3000/api/viewCustomer
+var insert_customer = "Select * from customer";
+
+
+[
+    {
+        "id": 1,
+        "name": "j",
+        "mobile": "lkj",
+        "address": "jlk"
+    },
+    {
+        "id": 2,
+        "name": "Sandhiya",
+        "mobile": "7418227833",
+        "address": "Palladam"
+    }
+]
+
+
+=========================================================
+Add Courier
+172.30.3.46:3000/api/addCourier
+
+var insert_customer = "INSERT INTO `courier` (`id`, `mobile`, `name`, `sendlocation`, `currentlocation`, `address`) VALUES (NULL, '"+mobile+"', '"+name+"', '"+sendlocation+"', '',
+
+{
+	"name":"Sandhiya",
+	"mobile":"7418227833",
+	"sendlocation":"send location",
+	"fulladdress":"fulladdress"
+}
+
+Courier has been created
+
+
+========================================================
+
+Update Courier
+172.30.3.46:3000/api/updateCourier
+{
+	"courierno":"3",
+	"currentlocation":"tirupur"
+	
+}
+
+Courier has been updated
+
+
+
+========================================================
+view Courier
+172.30.3.46:3000/api/search
+
+{
+	"courierno":"3"
+
+	
+}
+
+
+[
+    {
+        "id": 3,
+        "mobile": "7418227833",
+        "name": "Sandhiya",
+        "sendlocation": "send location",
+        "currentlocation": "tirupur",
+        "address": "fulladdress"
+    }
+]
+
+
+
+

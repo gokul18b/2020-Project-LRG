@@ -1,0 +1,150 @@
+<html>
+<head>
+
+    <link href="/bootstrap/bootstrap.css" rel="stylesheet"/>
+    <link href="/bootstrap/datatables.css" rel="stylesheet"/>
+
+
+    <link rel="stylesheet" type="text/css" href="/home/home.css">
+</head>
+<body>
+<div class="container">
+    <h1>Registration</h1>
+    <table class="table">
+        <tbody>
+        <tr>
+            <td colspan="1">
+                <form class="well form-horizontal">
+                    <fieldset>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Name</label>
+
+                            <div class="col-md-8 inputGroupContainer">
+                                <div class="input-group"><span class="input-group-addon"><i
+                                        class="glyphicon glyphicon-user"></i></span>
+                                    <input id="name" name="fullName"  class="form-control"
+                                           required="true" value="" type="text"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Mobile Number</label>
+
+                            <div class="col-md-8 inputGroupContainer">
+                                <div class="input-group"><span class="input-group-addon"><i
+                                        class="glyphicon glyphicon-home"></i></span>
+                                    <input id="mobile" name="addressLine1"
+
+                                           class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Password</label>
+
+                            <div class="col-md-8 inputGroupContainer">
+                                <div class="input-group"><span class="input-group-addon"><i
+                                        class="glyphicon glyphicon-home"></i></span>
+                                    <input type="password" id="password" name="addressLine1"
+
+                                           class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Vehicle Number</label>
+
+                            <div class="col-md-8 inputGroupContainer">
+                                <div class="input-group"><span class="input-group-addon"><i
+                                        class="glyphicon glyphicon-home"></i></span>
+                                    <input id="vehicle" name="addressLine2"
+                                           class="form-control" required="true" value="" type="text"></div>
+                            </div>
+                        </div>
+                        <!--<div class="form-group">-->
+                            <!--<label class="col-md-4 control-label">ID PROOF</label>-->
+
+                            <!--<div class="col-md-8 inputGroupContainer">-->
+                                <!--<div class="input-group"><span class="input-group-addon"><i-->
+                                        <!--class="glyphicon glyphicon-home"></i></span>-->
+                                    <!--<input id="idproof" name="city"  class="form-control"-->
+                                           <!--required="true" value="" type="text"></div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                            <!--<label class="col-md-4 control-label">RC BOOK NO</label>-->
+
+                            <!--<div class="col-md-8 inputGroupContainer">-->
+                                <!--<div class="input-group"><span class="input-group-addon"><i-->
+                                        <!--class="glyphicon glyphicon-home"></i></span>-->
+                                    <!--<input id="rcno" name="state"-->
+                                           <!--class="form-control" required="true" value="" type="text"></div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">ADDRESS</label>
+
+                            <div class="col-md-8 inputGroupContainer">
+                                <div class="input-group"><span class="input-group-addon"><i
+                                        class="glyphicon glyphicon-home"></i></span>
+                                    <input id="address" name="postcode"
+                                           class="form-control" required="true" value="" type="text"></div>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-9"></div>
+                        <div class="col-sm-3">
+
+                        <div class="form-group" style="padding: 30px">
+                            <button onclick="addCustomer()" style="position: absolute;float: right" type="button" class="btn btn-info">Signup</button>
+                        </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </td>
+
+        </tr>
+        </tbody>
+    </table>
+    <a href="/" >Go Login</a>
+</div>
+</body>
+<script src="/bootstrap/jquery.min.js"></script>
+
+<script src="/bootstrap/datatable.min.js"></script>
+<script src="/bootstrap/datatable.bootstrap.min.js"></script>
+<script src="/bootstrap/bootstrap.min.js"></script>
+<script>
+    function addCustomer() {
+
+        var name = $("#name").val();
+        var mobile = $("#mobile").val();
+        var password = $("#password").val();
+        var vehicle = $("#vehicle").val();
+        var idproof = "";
+        var rcno = "";
+        var address = $("#address").val();
+
+        $.ajax({
+            type: "POST",
+            data: {
+                    name:name,
+                    mobile:mobile,
+                    password:password,
+                    vehicle:vehicle,
+                    idproof:idproof,
+                    rcno:rcno,
+                    address:address,
+                    },
+            url: "/api/add_customer", success: function (result) {
+                alert(result)
+                $("#name").val("");
+                $("#mobile").val("");
+                $("#password").val("");
+                $("#vehicle").val("");
+                // $("#idproof").val("");
+                // $("#rcno").val("");
+                $("#address").val("");
+
+            }
+        });
+    }
+</script>
+</html>

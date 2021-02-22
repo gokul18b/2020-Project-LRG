@@ -1,0 +1,65 @@
+<html>
+<head>
+
+    <link href="/bootstrap/bootstrap.css" rel="stylesheet"/>
+    <link href="/bootstrap/datatables.css" rel="stylesheet"/>
+
+
+    <link rel="stylesheet" type="text/css" href="/home/home.css">
+</head>
+<body>
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h2>Car parking System</h2>
+            <a href="#" class="nav-tabs-dropdown btn btn-block btn-primary">Tabs</a>
+            <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-tabs-horizontal">
+                <li class="active"><a href="#htab1" data-toggle="tab">Booking</a></li>
+                <li><a href="#htab2" data-toggle="tab">Tokens</a></li>
+                <li><a href="/">Logout</a></li>
+            </ul>
+            <div class="tab-content" style="margin: 30px">
+                <div role="tabpanel" class="tab-pane fade in active" id="htab1">
+                    <div class="container">
+                        <div class="row">
+                            <h1>Select Mall</h1>
+
+                            <div role="tabpanel">
+                                <div class="col-sm-3">
+                                    <ul class="nav nav-pills brand-pills nav-stacked" id="menulist" role="tablist">
+                                    </ul>
+                                </div>
+                                <div class="col-sm-9">
+                                    <div class="tab-content">
+                                        <div role="tabpanel" class="tab-pane active" id="tab1">
+                                            <div class="col-sm-12" id="slot">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade in" id="htab2">
+                    <div id="token_list">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="/bootstrap/jquery.min.js"></script>
+<script src="/home/user.js"></script>
+<script src="/bootstrap/datatable.min.js"></script>
+<script src="/bootstrap/datatable.bootstrap.min.js"></script>
+<script src="/bootstrap/bootstrap.min.js"></script>
+<script src="/bootstrap/sweetalert2.js"></script>
+<link href="/bootstrap/sweetalert2.css" rel="stylesheet"/>
+
+
+</html>

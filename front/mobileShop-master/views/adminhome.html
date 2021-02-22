@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>File Uploader - coligo.io</title>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+
+<!--<input id="upload-input" type="file" name="uploads[]" multiple="multiple"></br>-->
+<!--<button id="upload" type="button">Upload</button></br>-->
+<!--<button id="download" type="button">download</button></br>-->
+
+<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="javascripts/adminhome.js"></script>
+
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-12">
+            <div class="panel with-nav-tabs panel-danger">
+                <div class="panel-heading">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#tab1danger" data-toggle="tab">Employee Registration</a></li>
+                        <li><a href="#tab2danger" data-toggle="tab">Mobile Accesories</a></li>
+                        <li><a href="#tab3danger" data-toggle="tab">Purchase</a></li>
+                        <li><a href="#tab4danger" data-toggle="tab">Sales</a></li>
+                        <li > <a href="#tab5danger" data-toggle="tab">Billing</a></li>
+						<li onclick="logout()"> <a  data-toggle="tab">Logout</a></li>
+
+                    </ul>
+                </div>
+                <div class="panel-body">
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="tab1danger" >
+                            <div id="list"  class="col-sm-6">
+
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="usr">Name</label>
+                                    <input type="text" class="form-control" id="model" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Mobile</label>
+                                    <input type="text" class="form-control" id="company" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="usr">Age</label>
+                                    <input type="text" class="form-control" id="price" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Gender</label>
+                                    <input type="text" class="form-control" id="name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Salary</label>
+                                    <input type="text" class="form-control" id="mobile">
+                                </div>
+                                <button onclick="pay()" class="warning">Add Customer</button>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab2danger">
+                            <div class="col-sm-12">
+                                <div class="form-group col-sm-4">
+                                    <label for="bookid">Mobile Model</label>
+                                    <input class="form-control input-sm" id="mobileid" type="text">
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group col-sm-4">
+                                    <label for="bookname">Brand</label>
+                                    <input class="form-control input-sm" id="companyname" type="text">
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group col-sm-4">
+                                    <label for="authorname">Price</label>
+                                    <input class="form-control input-sm" id="modelno" type="text">
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group col-sm-4">
+                                    <label for="bookname">Ram</label>
+                                      <input maxlength="5" class="form-control input-sm" id="ssprice" type="text">
+                                </div>
+                            </div>
+                           
+                            <div class="col-sm-12">
+                                <div class="form-group col-sm-4">
+                                    <label for="publishyear">Cam PX</label>
+                                    <input maxlength="5" class="form-control input-sm" id="ssprice" type="text">
+                                </div>
+                            </div>
+							  <div class="col-sm-12">
+                                <div class="form-group col-sm-4">
+                                    <label for="publishyear">Storage</label>
+                                    <input maxlength="5" class="form-control input-sm" id="ssprice" type="text">
+                                </div>
+                            </div>
+                           <button onclick="pay()" class="warning">Add Mobile</button>
+
+                        </div>
+                        <div class="tab-pane fade" id="tab3danger">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="usr">Select Mobile</label>
+                                    <input type="text" class="form-control" id="smobile" >
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Quantity</label>
+                                    <input type="text" class="form-control" id="sname" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="usr">Details</label>
+                                    <input type="text" class="form-control" id="smodel" readonly>
+                                </div>
+                                
+                                <button onclick="service()" class="warning">Add Purchase</button>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab4danger">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="usr">Select Mobile</label>
+                                    <input type="text" class="form-control" id="smobile" >
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Quantity</label>
+                                    <input type="text" class="form-control" id="sname" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="usr">Details</label>
+                                    <input type="text" class="form-control" id="smodel" readonly>
+                                </div>
+                                
+                                <button onclick="service()" class="warning">Add Sales</button>
+                            </div>
+                        </div>
+						<div class="tab-pane fade" id="tab5danger">
+                            <div class="col-sm-6">
+                                
+                                <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Model</th>
+                                        <th scope="col">Brand</th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col">RAM</th>
+                                        <th scope="col">PX</th>
+                                        <th scope="col">Storage</th>
+                                        <th scope="col">Customer Name</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>xxxxx</td>
+                                        <td>xxxxx</td>
+                                        <td>xxxxx</td>
+                                        <td>xxxxx</td>
+                                        <td>xxxxx</td>
+                                        <td>xxxxx</td>
+                                        <td>xxxxx</td>
+
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br/>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body class="bodys">
+    <h1>MUNICIPAL <span>Municipal Corporation</span></h1>
+
+    <ul class="tabs" role="tablist">
+        <li>
+            <input type="radio" name="tabs" id="tab1" checked />
+            <label for="tab1" role="tab" aria-selected="true" aria-controls="panel1" tabindex="0">Add Complaint</label>
+            <div id="tab-content1" class="tab-content" role="tabpanel" aria-labelledby="description"
+                aria-hidden="false">
+                <form style="width: 30%;">
+                    <div class="form-group">
+                      <label>Mobile</label>
+                      <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                      <label>Complaint</label>
+                      <input class="form-control" id="exampleInputPassword1" placeholder="Complaint">
+                    </div>
+                    <div class="form-group">
+                        <label>Full Address</label>
+                        <input class="form-control" id="exampleInputPassword1" placeholder="Full address">
+                      </div>
+                      <div class="form-group">
+                        <label>Complaint Reason</label>
+                        <input class="form-control" id="exampleInputPassword1" placeholder="Complaint Reason">
+                      </div>
+                    
+                    <button type="submit" class="btn btn-primary">Add Complaint</button>
+                  </form>
+            </div>
+        </li>
+
+        <li>
+            <input type="radio" name="tabs" id="tab2" />
+            <label for="tab2" role="tab" aria-selected="false" aria-controls="panel2" tabindex="0">View Complaint status</label>
+            <div id="tab-content2" class="tab-content" role="tabpanel" aria-labelledby="specification"
+                aria-hidden="true">
+                <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Mobile</th>
+                        <th scope="col">Complaint</th>
+                        <th scope="col">Full Address</th>
+                        <th scope="col">Complaint Reason</th>
+                        <th scope="col">Current Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>987654321</td>
+                        <td>XXXXX</td>
+                        <td>xxxxxxxxxxxxxxxxxx xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxxxxxxx</td>
+                        <td>xxxxxxxxxx</td>                        
+                      </tr>                      
+                    </tbody>
+                  </table>
+            </div>
+        </li>
+        <li>
+            <input type="radio" name="tabs" id="tab2" />
+            <label for="tab2" role="tab" aria-selected="false" aria-controls="panel2" tabindex="0">Logout</label>
+        </li>
+    </ul>
+
+    <br style="clear: both;" />   
+</body>
+
+</html>
